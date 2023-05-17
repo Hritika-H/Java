@@ -11,6 +11,7 @@ public class LinearSearch{
         return -1;
         
     }
+    
     public static void main(String args[]) {
      int[] arr={5,3,7,6,4,1};
      int n=arr.length;
