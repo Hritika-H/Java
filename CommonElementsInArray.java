@@ -33,3 +33,14 @@ public class CommonElementsInArray {
      
     }
 }
+
+
+
+/*
+OUTPUT
+Array 1: [bear, cat, dog, fish, monkey, cat, bird]
+Array 2: [lion, cat, bear, monkey]
+Common Elements
+monkey cat bear
+*/
+
