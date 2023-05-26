@@ -1,0 +1,35 @@
+/*
+QUESTION
+Write a Java program to create a class called Animal with a method called makeSound(). 
+Create a subclass called Cat that overrides the makeSound() method to meow.
+*/
+
+class Animal {
+    public void makeSound(){
+        System.out.println("Animal Sounds...");
+    }
+   
+}
+
+class Cat extends Animal{
+    @Override
+    public void makeSound(){
+         System.out.println("Meow!");
+    }
+}
+
+public class MyClass{
+     public static void main(String args[]) {
+      Animal a=new Animal();
+      a.makeSound();
+      Cat c=new Cat();
+      c.makeSound();
+    }
+}
+
+
+/*
+OUTPUT
+Animal Sounds...
+Meow!
+*/
