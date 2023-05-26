@@ -1,0 +1,57 @@
+/*
+QUESTION
+Write a Java program to create a class called Employee with methods called work() and getSalary(). 
+Create a subclass called HRManager that overrides the work() method and adds a new method called addEmployee().
+*/
+
+class Employee{
+    private int salary;
+    public Employee(int salary){
+        this.salary=salary;
+    }
+    
+    public void work(){
+        System.out.println("Working as an Employee");
+    }
+    public int getSalary(){
+        return salary;
+    }
+}
+
+class HRManager extends Employee{
+    
+     public HRManager(int salary){
+        super(salary);
+    }
+    
+    @Override
+    public void work(){
+        System.out.println("Working as an HR Manager");
+    }
+    
+    public void addEmployee(){
+        System.out.println("HR Manager is Adding new Employee");
+    }
+}
+
+public class MyClass{
+    public static void main(String args[]){
+        Employee e1=new Employee(70000);
+        HRManager e2=new HRManager(75000);
+        e1.work();
+        System.out.println("Salary is: "+ e1.getSalary());
+        e2.work();
+        System.out.println("Salary is: "+ e2.getSalary());
+        e2.addEmployee();
+    }
+}
+
+
+/*
+OUTPUT
+Working as an Employee
+Salary is: 70000
+Working as an HR Manager
+Salary is: 75000
+HR Manager is Adding new Employee
+*/
