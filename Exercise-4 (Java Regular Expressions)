@@ -1,0 +1,29 @@
+//Write a Java program to find the sequence of one upper case letter followed by lower case letters.
+
+public class MyClass {
+    public static void main(String args[]) {
+     validate("Javatest");
+     validate("javatest");
+     validate("JAvatest");
+     validate("Java Test");
+     validate("J");
+    }
+    
+    public static void validate(String txt){
+        if(txt.matches("^[A-Z][a-z]+$")){
+            System.out.println("Found");
+        }
+        else{
+            System.out.println("Not Found");
+        }
+    }
+}
+
+/*
+Output
+Found
+Not Found
+Not Found
+Not Found
+Not Found
+*/
