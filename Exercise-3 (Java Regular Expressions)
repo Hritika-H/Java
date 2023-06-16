@@ -1,0 +1,37 @@
+//Write a Java program to find sequences of lowercase letters joined by an underscore.
+
+public class MyClass {
+    public static void main(String args[]) {
+     validate("java_test");
+     validate("Java_tesT");
+     validate("y2_k");
+     validate("java test");
+    }
+    
+    public static void validate(String txt){
+        if(txt.matches("^[a-z]+_[a-z]+$")){
+            System.out.println("Found");
+        }
+        else{
+            System.out.println("Not Found");
+        }
+    }
+}
+
+
+/*
+Output:
+Found
+Not Found
+Not Found
+Not Found
+*/
+
+/*
+Regular Expressions Explanation:
+^ is match at the starting 
+[a-z] is in the range small a to z 
++ is atleast one or more 
+_ is just underscore
+$ is match at the ending of string
+*/
