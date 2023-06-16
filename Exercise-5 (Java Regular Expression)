@@ -1,0 +1,34 @@
+//Write a Java program that matches a string with a 'p' followed by anything ending in 'q'.
+
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+     validate("pgfhh12b_fhq");
+     validate("pgfhh 3b_fhq");
+     validate("p q");
+     validate("pgfh");
+     validate("pgfqh");
+     validate("pgfQ");
+    }
+    
+    public static void validate(String txt){
+        if(txt.matches("^p.*?q$")){
+            System.out.println("Found");
+        }
+        else{
+            System.out.println("Not Found");
+        }
+    }
+}
+
+
+/*
+OUTPUT
+Found
+Found
+Found
+Not Found
+Not Found
+Not Found
+*/
